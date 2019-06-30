@@ -1,0 +1,29 @@
+@import 'base/variables';  
+@import 'base/mixins';   
+
+
+nav.woocommerce-pagination, nav.ss-pagination { background-color: transparent; box-shadow: none; border-top: 2px solid #BFBFBF; margin-bottom: 45px; 
+  &.ss-pagination { border-top: 0; text-align: center; 
+    ul { display: inline-block; white-space: nowrap; padding: 0; clear: both; 
+      li { 
+        span { display: block!important; }
+      }
+    }
+  }
+  ul.page-numbers { color: #424242; border: none; margin-top: 20px;
+    li { margin: 0 .2em; 
+      span, a { padding: 0.9em; color: #424242!important;}
+      span.current { border: 2px solid #424242; background: none; line-height: 8px; }
+
+    }
+    li:not(.current) { border-right: none;
+      a { line-height: 12px; }
+    }
+    a {
+      &:hover,
+      &:focus {
+        background-color: rgba(0,0,0,0.1)!important;
+      }
+    }
+  }
+}
