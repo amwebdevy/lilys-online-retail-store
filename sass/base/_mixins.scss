@@ -1,0 +1,30 @@
+/*
+	@package simpleshoptheme
+*/
+
+/*
+	Mixins
+	------------------------------------------------
+*/
+
+@mixin animate($attr, $time) {
+	-webkit-transition: $attr $time ease !important;
+	-moz-transition: $attr $time ease !important;
+	-ms-transition: $attr $time ease !important;
+	-o-transition: $attr $time ease !important;
+	transition: $attr $time ease !important;
+}
+
+@mixin transform($val) {
+	-webkit-transform: $val;
+	-moz-transform: $val;
+	-ms-transform: $val;
+	-o-transform: $val;
+	transform: $val;
+}
+
+@mixin fullwidth() {
+	width: 100%;
+	height: auto;
+	margin: 0;
+}

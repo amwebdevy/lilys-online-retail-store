@@ -1,0 +1,44 @@
+@import 'variables';
+@import 'mixins';
+
+div.breadcrumbs {
+	background-color: $secondary-color;
+	nav {
+		height: auto;
+		line-height: 50px;
+		.nav-wrapper {
+			a.breadcrumb {
+				color: $primary-color;
+				text-transform: uppercase;
+				font-weight: 700;
+				font-size: 14px;
+				&:not(:last-child) {
+					&:hover,
+					&:focus {
+						color: #fff !important;
+					}
+				}
+				&:last-child {
+					color: #000;
+					cursor: default;
+				}
+				&:before {
+					content: '' !important;
+					color: $primary-color !important;
+					vertical-align: middle !important;
+					display: inline-block;
+					margin: 0 10px 0 10px !important;
+					width: 3px;
+					height: 13px;
+					background: $primary-color;
+					transform: rotate(15deg);
+				}
+				&:first-child {
+					&:before {
+						display: none;
+					}
+				}
+			}
+		}
+	}
+}
